@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="author" content="HAE">
+<title>패스메이트</title>
+<link rel="preload" href="fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/engine.css">
+</head>
+<body>
+<div class="app pm-hub" id="hub">
+  <header class="topbar">
+    <button class="brand brand-btn" type="button" data-act="logo" aria-label="패스메이트 홈으로">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-name">패스메이트</span>
+    </button>
+    <nav class="tabs" id="tabs" aria-label="메뉴" hidden>
+      <button data-view="home" class="tab"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>홈</span></button>
+      <button data-view="study" class="tab"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7M8 11h7"/></svg><span>공부</span></button>
+      <button data-view="sched" class="tab"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>일정</span></button>
+      <button data-view="wrong" class="tab"><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/><path d="M9 11l6 6M15 11l-6 6"/></svg><span>오답</span></button>
+      <button data-view="record" class="tab"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M8.5 13 7 21l5-3 5 3-1.5-8"/></svg><span>마이</span></button>
+    </nav>
+    <button class="acct" id="acct" data-act="acct" aria-label="내 계정 · 로그아웃" hidden></button>
+  </header>
+  <main id="view" class="view" tabindex="-1"></main>
+</div>
+<div id="modal" class="modal pm-hub" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-head"><h2 id="modal-title"></h2><button class="icon-btn" data-close aria-label="닫기">×</button></div>
+    <div id="modal-body" class="modal-body"></div>
+  </div>
+</div>
+<div id="study" class="pm-study" hidden></div>
+<div id="toast" class="toast pm-hub" role="status" hidden></div>
+<script src="js/catalog.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/store.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
